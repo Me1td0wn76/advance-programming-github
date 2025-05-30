@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: springboot-demo
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+    # 必要に応じて application.properties の外部マウント例:
+    # volumes:
+    #   - ./src/main/resources/application.properties:/app/src/main/resources/application.properties:ro
